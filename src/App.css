@@ -89,19 +89,58 @@ body {
   line-height: 1.6;
   color: #555;
 }
-
-.filter-section{
-  display :flex;
-
-  justify-content: space-around;
-  margin : 10px;
-  padding : 20px 35px;
-  box-shadow: 0px 0px 5px rgba(90, 85, 85, 0.3); 
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 20px 35px;
+  box-shadow: 0px 0px 5px rgba(90, 85, 85, 0.3);
   border-radius: 3px;
+  position: relative;
 }
-.hide-filter{
-  color :  #848181;
+
+.hide-filter {
+  color: #848181;
+  cursor: pointer;
+  
 }
+
+
+.filter-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%; /* Aligns the dropdown just below the parent */
+  left: 0; /* Aligns with the left edge of the parent */
+  width: max-content; /* Ensures the dropdown is wide enough for its content */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensures it appears above other elements */
+}
+
+.dropdown-list li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-dropdown:hover .dropdown-list {
+  display: block; /* Shows the dropdown when hovering over the parent */
+}
+
 
 /* products styling  */
 
